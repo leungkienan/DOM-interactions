@@ -14,7 +14,6 @@ function bindEventListeners(dots) {
     dots[i].addEventListener("contextmenu", makeGreen);
     dots[i].addEventListener("click", makeBlue);
     dots[i].addEventListener("dblclick", hide);
-
   }
 }
 
@@ -30,10 +29,11 @@ function makeBlue(evt) {
   updateCounts();
 }
 // CREATE FUNCTION hide HERE
-function hide(evt){
-  evt.target.classList.toggle('invisible');
-  updateCounts;
+function hide(evt) {
+  evt.target.classList.toggle("invisible");
+  updateCounts();
 }
+
 function updateCounts() {
   var totals = {
     blue: 0,
@@ -41,15 +41,12 @@ function updateCounts() {
     invisible: 0,
   };
 
-  // WRITE CODE HERE TO COUNT BLUE, GREEN, AND INVISIBLE DOTS
-      // checks the board for dots 
-      // if dot = blue, increase blue by one, etc. 
-      // if we find a blue dot in the bot right, we call the function
-      // update the totals[0] to increase its value by one. 
- blue = document.getElementsByClassName(blue)
- 
- document.getElementsByClassName(green)
- document.getElementsByClassName(invisible)
+  totals.getElementsByClassName("blue").length;
+
+
+
+  totals.getElementsByClassName("green").length;
+  totals.getElementsByClassName("invisible").length;
 
   // Once you've done the counting, this function will update the display
   displayTotals(totals);
