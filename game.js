@@ -40,13 +40,16 @@ function updateCounts() {
     green: 0,
     invisible: 0,
   };
+  // function checks the array for the number of blue dots
+  // for every dot found in the array, increase the total blue by 1
+  // scan the array, count its length, increment the total blue by 1. 
 
-  totals.getElementsByClassName("blue").length;
+totals.blue = document.getElementsByClassName(totals[0]).length;
 
+totals.green = document.getElementsByClassName(totals[1]).length;
+totals.invisible = document.getElementsByClassName(totals[2]).length;
 
-
-  totals.getElementsByClassName("green").length;
-  totals.getElementsByClassName("invisible").length;
+  
 
   // Once you've done the counting, this function will update the display
   displayTotals(totals);
