@@ -40,16 +40,42 @@ function updateCounts() {
     green: 0,
     invisible: 0,
   };
-  // function checks the array for the number of blue dots
-  // for every dot found in the array, increase the total blue by 1
-  // scan the array, count its length, increment the total blue by 1. 
 
-totals.blue = document.getElementsByClassName(totals[0]).length;
+  // WRITE CODE HERE TO COUNT BLUE, GREEN, AND INVISIBLE DOTS
+  // count the amount of dots that have a colour
+  // if theres a blue dot, the blue counter will be 1, if two, then blue count = 2 etc
+  // if dot is removed, the counter will show that
 
-totals.green = document.getElementsByClassName(totals[1]).length;
-totals.invisible = document.getElementsByClassName(totals[2]).length;
+  // console.log(document.getElementsByClassName("board")[0].children);
 
-  
+  for (
+    var i = 0;
+    i < document.getElementsByClassName("board")[0].children.length;
+    i++
+  ) {
+    console.log(
+      document.getElementsByClassName("board")[0].children[i].className
+    );
+
+    if (
+      document.getElementsByClassName("board")[0].children[i].className ===
+      i + " blue"
+    ) {
+      totals["blue"] += 1;
+    }
+    if (
+      document.getElementsByClassName("board")[0].children[i].className ===
+      i + " green"
+    ) {
+      totals["green"] += 1;
+    }
+    if (
+      document.getElementsByClassName("board")[0].children[i].className ===
+      i + " invisible"
+    ) {
+      totals["invisible"] += 1;
+    }
+  }
 
   // Once you've done the counting, this function will update the display
   displayTotals(totals);
