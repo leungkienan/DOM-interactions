@@ -46,22 +46,24 @@ function updateCounts() {
   // if theres a blue dot, the blue counter will be 1, if two, then blue count = 2 etc
   // if dot is removed, the counter will show that
 
-  // console.log(document.getElementsByClassName("board")[0].children);
+  // console.log(document.getElementsByClassName("board")[0].children); 
 
   for (
     var i = 0;
-    i < document.getElementsByClassName("board")[0].children.length;
+    i < document.getElementsByClassName("board")[0].children.length; 
+    // this will check if 'i' is less than the size of the board aka 9 spaces.
     i++
   ) {
     console.log(
       document.getElementsByClassName("board")[0].children[i].className
-    );
+    ); //checking if the board is present. 
 
     if (
       document.getElementsByClassName("board")[0].children[i].className ===
-      i + " blue"
+      i + " blue" // this checks if the circle has the class name blue attached to it 
     ) {
       totals["blue"] += 1;
+      // increments the total.blue by 1. 
     }
     if (
       document.getElementsByClassName("board")[0].children[i].className ===
