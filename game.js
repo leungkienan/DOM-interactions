@@ -47,34 +47,18 @@ function updateCounts() {
   // if dot is removed, the counter will show that
 
   // console.log(document.getElementsByClassName("board")[0].children); 
+  
 
-  for (
-    var i = 0;
-    i < document.getElementsByClassName("board")[0].children.length; 
-    // this will check if 'i' is less than the size of the board aka 9 spaces.
-    i++
-  ) {
-    console.log(
-      document.getElementsByClassName("board")[0].children[i].className
-    ); //checking if the board is present. 
-
-    if (
-      document.getElementsByClassName("board")[0].children[i].className ===
-      i + " blue" // this checks if the circle has the class name blue attached to it 
-    ) {
+  for (var i = 0;i < document.getElementsByClassName("board")[0].children.length; i++) {  // this will check if 'i' is less than the size of the board aka 9 spaces.
+    console.log(document.getElementsByClassName("board")[0].children[i].className); //checking if the board is present. 
+    if (document.getElementsByClassName("board")[0].children[i].className === i + " blue") { // this checks if the circle has the class name blue attached to it
       totals["blue"] += 1;
       // increments the total.blue by 1. 
     }
-    if (
-      document.getElementsByClassName("board")[0].children[i].className ===
-      i + " green"
-    ) {
+    if (document.getElementsByClassName("board")[0].children[i].className === i + " green") {
       totals["green"] += 1;
     }
-    if (
-      document.getElementsByClassName("board")[0].children[i].className ===
-      i + " invisible"
-    ) {
+    if (document.getElementsByClassName("board")[0].children[i].className === i + " invisible") {
       totals["invisible"] += 1;
     }
   }
